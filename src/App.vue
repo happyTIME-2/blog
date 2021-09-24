@@ -12,8 +12,7 @@
       <router-view />
     </el-main>
     <el-footer>
-      <el-link :href="link" target="_blank" :underline="false">粤ICP备18074936号-</el-link>
-      <el-link :href="link" target="_blank" :underline="false">粤ICP备18074936号-</el-link>
+      <el-link :href="link" target="_blank" :underline="false">粤ICP备18074936号</el-link>
     </el-footer>
   </el-container>
 </template>
@@ -28,8 +27,11 @@ export default defineComponent({
       console.log(key, keyPath)
     }
 
+    const link = ref('https://beian.miit.gov.cn/')
+
     return {
       activeIndex,
+      link,
       handleSelect
     }
   }
